@@ -233,7 +233,7 @@ function start() {
       client.query("truncate table " + TRANIER_TABLE);
       console.log("连接数据库成功");
       client.query(
-        "select name AS solution from category;",
+        "select name AS solution from CATEGORY;",
         async function (error, results, fields) {
           if (error) throw error;
           let urlList = results.map((k) => {
